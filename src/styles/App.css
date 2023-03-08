@@ -1,0 +1,77 @@
+/* TODO Add a wite backgroing image with rectangles to the landing page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --button-padding-small-screens: 4px;
+    --button-regular-padding: 8px;
+    --background-color: #ffffff;
+    --higlight-color: #f5f0e8;
+    --button-color: #000000;
+    --black-tint: #242223;
+    --button-hover: #f5f0e9;
+    --card-padding-small-screens: 8px;
+    --narbar-padding: 20px;
+    --text:#101010;
+    --button-radius: 4px;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Clash Display', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 5px 10px;
+    color: var(--text);
+    border-bottom: 1px solid var(--button-color);
+}
+nav a{
+    color: var(--text);
+    text-decoration: none;
+    padding-top: 10px;
+}
+.logo a{
+    font-weight: 500;
+    padding-top:10px;
+}
+.nav-links {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-links button{
+    background-color: var(--button-color);
+    padding: var(--button-regular-padding);
+    color: var(--background-color);
+    border: 2px solid var(--black-tint);
+    border-radius: var(--button-radius);
+}
+/* Landing page */
+.landing-page{
+    height: 95vh;
+    margin: 100px 50px 100px 50px;
+    position: relative;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: aquamarine;
+}
+.container div h1{
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 48px;
+    padding-bottom: 12px;
+}
+.support-text{
+    display: flex;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 1024px){
+    
+}
