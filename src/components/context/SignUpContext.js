@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from "react-toastify";
 
 
-const SignUpDataSource = () => {
+const SignUpSetUp = () => {
 
-  // FIELD VALUES OF THE SIGN UP INPUTS
     const newUser = {
         userName: "",
         email: "",
@@ -32,7 +31,6 @@ const SignUpDataSource = () => {
       };
 
 
-      //LOGIC TO SAVE THE SIGN UP PROCESS
       const handleSignUp =  (e) => {
         e.preventDefault();
         if(userName && email && UserId && password &&  password.length >= 12){
@@ -64,7 +62,7 @@ export const UseSignUp = ({children}) => {
 
 
   return (
-    <SignUpContext.Provider value={SignUpDataSource()}>
+    <SignUpContext.Provider value={SignUpSetUp()}>
       {children}
     </SignUpContext.Provider>
   )

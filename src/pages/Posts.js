@@ -1,6 +1,5 @@
-import React, {useState, useMemo} from 'react'
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import ReactPaginate from "react-paginate";
+import React, { useMemo} from 'react'
+import {  Outlet, useNavigate } from "react-router-dom";
 import { useSignUpContext } from '../components/context/SignUpContext';
 import Loader from '../components/Loading/Loading';
 import { useAllPostContext } from '../components/context/FetchPostsContext';
@@ -9,15 +8,11 @@ import NonNav from '../components/AllPosts/common/NonNav';
 const AppHomePage = () => {
 
 
-const [search, setSearch] = useState("")
 const{username} = useSignUpContext()
 const{posts,
   isLoading,
 } = useAllPostContext()
 const navigate = useNavigate()
-const [pageNumber, setPageNumber] = useState(0)
-const postsPerPage = 12
-const pagesVisited = pageNumber * postsPerPage
 
 
 
@@ -27,11 +22,7 @@ const sortedPosts = useMemo(() =>
 posts.sort((a,b) => b.id - a.id)
 ,[posts])
 
-const pageCount = Math.ceil(posts.length / postsPerPage);
 
-const changePage = ({viewed_page}) => {
-  setPageNumber(viewed_page)
-}
 
 return (
   <>
@@ -45,9 +36,7 @@ return (
         </div>
           
         <div>
-        {/* <div>
-          <input placeholder='Search for a post' value={search} onChange={ev => ev.target.value}/>
-        </div> */}
+
         <div>
         <button onClick={() => navigate('/posts/new-post')} className={'action-buttons'}>New post</button>
         </div>
@@ -62,19 +51,19 @@ return (
       <div >
         <div className={'all-posts'}>
           {
-            isLoading ? sortedPosts.slice(pagesVisited, pagesVisited + postsPerPage)
+            isLoading ? sortedPosts
             .map((post, index) => {
               return (
                 <div key={index} className={'post-card'}>
                    <div>
                     <h3 className='post-title'>
-                      {/* {filterdView(post.title, 20)} */}
+
                       {post.title}
                       <br></br>
                       </h3>
                       <p className='post-body'>
                         {post.body}
-                        {/* {filterdView(post.body, 100)} */}
+
                         </p>
                     
                    </div>
@@ -83,22 +72,7 @@ return (
             }) : <Loader />
           }
         </div>
-        {/* <div>
-          {
-            isLoading ? <ReactPaginate 
-            previousLabel={"Previous"}
-            nextLabel={"Next"}
-            pageCount={pageCount}
-            onPageChange={changePage}
-            containerClassName={"paginationBttns"}
-            previousLinkClassName={"previousBttn"}
-            nextLinkClassName={"nextBttn"}
-            disabledClassName={"paginationDisabled"}
-            activeClassName={"paginationActive"}
-            
-            /> : ''
-          }
-        </div> */}
+
       </div>
       </section>
     </>
