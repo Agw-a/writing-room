@@ -1,5 +1,5 @@
 import React, { useMemo} from 'react'
-import {  Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useSignUpContext } from '../components/context/SignUpContext';
 import Loader from '../components/Loading/Loading';
 import { useAllPostContext } from '../components/context/FetchPostsContext';
