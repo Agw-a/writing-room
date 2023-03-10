@@ -162,7 +162,6 @@ const UpdatePost = () => {
                 </div>
 
                 <div>
-                    
                 {
                                 userId ? (
                                     <div>
@@ -201,3 +200,47 @@ const UpdatePost = () => {
 }
 
 export default UpdatePost;
+
+/**
+ * 
+ *    
+    
+    
+    const navigate = useNavigate();
+    const  id  = useParams();
+
+
+    
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+    // const filterdView = (str, count) => {
+    //     if (str.length > count) {
+    //       str = str.substring(0, count) + " ... ";
+    //     }
+    //     return str;
+    // }
+
+    
+       {/* <button>Create Post</button> 
+       <div>
+        <Outlet />
+      </div>  */ //}
+
+/**  return (
+
+
+   
+ )
+*/

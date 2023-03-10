@@ -11,7 +11,6 @@ const NavBar = () => {
         <div className='nav-links'>
             <Link to={'/signup'}>BLOG</Link>
             <button onClick={() => navigate('/signup')} className={'action-buttons'}>SIGN UP</button>
-
         </div>
     </nav>
   )

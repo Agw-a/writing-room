@@ -183,6 +183,10 @@ form textarea{
     margin: 20px;
     color: var(--background-color);
 }
+ li{
+    list-style: none;
+    padding: 4px;
+}
 .into-text{
     margin-bottom: 12px;
 }

@@ -54,7 +54,7 @@ return (
             isLoading ? sortedPosts
             .map((post, index) => {
               return (
-                <div key={index} className={'post-card'}>
+                <Link  to={`/post/${post.id}`} key={index} className={'post-card'}>
                    <div>
                     <h3 className='post-title'>
 
@@ -67,7 +67,7 @@ return (
                         </p>
                     
                    </div>
-                </div>
+                </Link>
               )
             }) : <Loader />
           }
