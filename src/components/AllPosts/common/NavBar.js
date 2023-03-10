@@ -9,8 +9,8 @@ const NavBar = () => {
                <Link to={'/'}> W{" "}S</Link>
       </div>
         <div className='nav-links'>
-            <Link to={'/posts'}>BLOG</Link>
-            <button onClick={() => navigate('/signup')}>SIGN UP</button>
+            <Link to={'/signup'}>BLOG</Link>
+            <button onClick={() => navigate('/signup')} className={'action-buttons'}>SIGN UP</button>
 
         </div>
     </nav>
