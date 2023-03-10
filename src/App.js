@@ -9,7 +9,7 @@ import { UseSignUp } from './components/context/SignUpContext';
 import "react-toastify/dist/ReactToastify.css";
 import { GetPost } from './components/context/FetchPostsContext';
 import CreatePost from './components/AllPosts/CRUD/Create';
-import UpdatePost from '../moved/temporary-components/Update';
+// import UpdatePost from '../moved/temporary-components/Update';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <Route path='/posts' element={<AppHomePage />}>
         <Route path='new-post' element={<CreatePost/>}/>
       </Route>
-    <Route path="/post/:id" element={<UpdatePost />}/>
+    {/* <Route path="/post/:id" element={<UpdatePost />}/> */}
     <Route path='*' element={<></>}/>
     </Routes>
     </GetPost>

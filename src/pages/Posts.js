@@ -65,7 +65,7 @@ return (
             isLoading ? sortedPosts.slice(pagesVisited, pagesVisited + postsPerPage)
             .map((post, index) => {
               return (
-                <Link to={`/post/${post.id}`}  key={index} className={'post-card'}>
+                <div key={index} className={'post-card'}>
                    <div>
                     <h3 className='post-title'>
                       {/* {filterdView(post.title, 20)} */}
@@ -78,7 +78,7 @@ return (
                         </p>
                     
                    </div>
-                </Link>
+                </div>
               )
             }) : <Loader />
           }
