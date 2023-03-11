@@ -1,4 +1,4 @@
-import React, { useMemo} from 'react'
+import React, { useMemo} from 'react';
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useSignUpContext } from '../components/context/SignUpContext';
 import Loader from '../components/Loading/Loading';
@@ -54,7 +54,7 @@ return (
             isLoading ? sortedPosts
             .map((post, index) => {
               return (
-                <Link  to={`/post/${post.id}`} key={index} className={'post-card'}>
+                <div   key={index} className={'post-card'}>
                    <div>
                     <h3 className='post-title'>
 
@@ -65,9 +65,11 @@ return (
                         {post.body}
 
                         </p>
-                    
+                    <br></br>
+                    <br></br>
+                    <Link  to={`/post/${post.id}`} style={{color: 'orange'}}>View Comments</Link>
                    </div>
-                </Link>
+                </div>
               )
             }) : <Loader />
           }
