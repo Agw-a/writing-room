@@ -39,8 +39,7 @@ const CreatePost = () => {
       <div>
         <h3 className='into-text light-text'>Post a message</h3>
         </div>
-          {/* <label>User Id</label>
-          <input required type="text" name='userId'/> */}
+
           <div>
            <label style={{margin:'2px'}}>Title</label>
           <input className='form-textarea'
