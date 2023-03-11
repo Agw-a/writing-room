@@ -46,18 +46,6 @@ const SignUp = () => {
               onChange={handleSetUser}
             />
           </div>
-
-          <div>
-            <p className='form-label'>UserId</p>
-            <input className='form-textarea'
-              type="number"
-              placeholder="20"
-              name="UserId"
-              value={UserId}
-              onChange={handleSetUser}
-            />
-          </div>
-
           <div>
             <p className='form-label'>Password</p>
             <div className="password-wrapper">
