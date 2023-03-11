@@ -9,7 +9,7 @@ const SignUpSetUp = () => {
         userName: "",
         email: "",
         password: "",
-        UserId: 10
+        UserId: Math.floor((Math.random() * 10) + 1)
       }
 
       const navigate = useNavigate();
